@@ -25,4 +25,4 @@ Este proyecto contiene la implementación de cuatro ejercicios de programación 
 
 ## Autores
 
-José Hernández
+- José Hernández
