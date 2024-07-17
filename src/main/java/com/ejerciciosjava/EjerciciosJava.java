@@ -49,6 +49,28 @@ public class EjerciciosJava {
     
     
     
+    /* 3. Realice una función recursiva que imprima los valores invertidos de un 
+    TAD Pila, no es necesario conservar los valores de la misma una vez realizada 
+    está función. */
+    public static class Pila {
+        int valor;
+        Pila siguiente;
+
+        public Pila(int valor){
+            this.valor = valor;
+            this.siguiente = null;
+        }
+    }
+    public static String pilaRecursiva(Pila pila){
+        if (pila == null){
+            return "";
+    } else {
+        return pila.valor + " " + pilaRecursiva(pila.siguiente);
+    }
+}
+    
+    
+    
    
     
     
@@ -76,6 +98,14 @@ public class EjerciciosJava {
         System.out.println("2 --> CONCATENACION DE VALORES EN LA LISTA CIRCULAR -->: " + resultadoConcatenacion);
         System.out.println("==========================================================================================================================================");
         
-        
+        // 3 --> Impresión recursiva de una pila
+        Pila pila = new Pila(5);
+        pila.siguiente = new Pila(4);
+        pila.siguiente.siguiente = new Pila(3);
+        pila.siguiente.siguiente.siguiente = new Pila(2);
+        pila.siguiente.siguiente.siguiente.siguiente = new Pila(1);
+        System.out.println("====================================================");
+        System.out.println("3 --> IMPRESIOIN RECURSIVA DE LA PILA -->: " + pilaRecursiva(pila));
+        System.out.println("====================================================");
     }
 }
