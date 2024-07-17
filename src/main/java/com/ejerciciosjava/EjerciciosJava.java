@@ -70,7 +70,27 @@ public class EjerciciosJava {
 }
     
     
+    /* 4. Cree una función permita realizar la multiplicación de 2 valores A y 
+    B, dónde A sea un factorial de un número cualquiera y B sea la potencia de 
+    un número cualquiera elevado a cualquier otro número, por ejemplo: 8! + 4⁷.*/
+    public static long factorial(int numero){
+        if (numero == 0) {
+            return 1;
+        } else {
+            return numero * factorial(numero - 1);
+        }
+    }
+    public static double potencia(double base, int exponente){
+        if (exponente == 0) {
+            return 1;
+        } else {
+            return base * potencia(base, exponente - 1);
+        }
+    }
+    public static double multiFactorialPotencia(int numeroFactorial, int basePotencia, int exponentePotencia){
+        return factorial(numeroFactorial) * potencia(basePotencia, exponentePotencia);
     
+    }
    
     
     
@@ -107,5 +127,11 @@ public class EjerciciosJava {
         System.out.println("====================================================");
         System.out.println("3 --> IMPRESIOIN RECURSIVA DE LA PILA -->: " + pilaRecursiva(pila));
         System.out.println("====================================================");
+        
+        // 4 --> Multiplicación de factorial y potencia
+        double resultadoMultiplicacion = multiFactorialPotencia(5, 2, 3);
+        System.out.println("======================================================");
+        System.out.println("4 --> MULTIPLICACION DE FACTORIAL Y POTENCIA --> " + resultadoMultiplicacion);
+        System.out.println("======================================================");
     }
 }
