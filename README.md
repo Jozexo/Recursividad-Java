@@ -1,4 +1,4 @@
-# Recursividad-Java
+# Recursividad-Java-Ejercicios
 
 ## Ejercicios de Programación en Java
 
